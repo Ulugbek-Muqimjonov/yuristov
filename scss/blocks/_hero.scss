@@ -1,0 +1,272 @@
+@use "../mixins";
+.hero {
+    padding-top: 20px;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__span {
+        display: inline-block;
+        margin-right: auto;
+        margin-bottom: 20px;
+        color:#2f2b4380;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__about-wrapper {
+        text-align: center;
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 15px;
+        color: #140a32;;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.66px;
+    }
+    &__desc {
+        margin: 0;
+        margin-bottom: 29px;
+        color: #140a32;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+    &__about-innerdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__link1 {
+        width:300px;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+        color: #fff;;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        background-color: #33836E;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    &__link2 {
+        margin-bottom: 5px;
+        padding-bottom: 3px;
+        color: #33836e;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration: none;
+        border-bottom: 2px solid #33836e;
+    } 
+    &__link-desc {
+        display: block;
+        margin-bottom: 40px;
+        color:#2f2b4380;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__list {
+        @include mixins.unstyled-list($col:15px,$row:20px);
+        flex-wrap: wrap;
+        text-align: left;
+        margin-bottom: 42.5px;
+    }
+    &__item {
+        @include mixins.display($col:8px,$y:center);
+        min-width: 129px;
+        &::before {
+            @include mixins.psevdo-el(24px,24px,inline-block,"../../images/clock.svg");
+        }
+        &:nth-child(2) {
+            &::before {  
+                background-image: url("../../../images/flash.svg");
+            }   
+        }
+        &:nth-child(3) {
+            &::before {  
+                background-image: url("../../../images/money-square.svg");
+            }   
+        }
+        &:nth-child(4) {
+            &::before {  
+                background-image: url("../../../images/lock.svg");
+                background-repeat: no-repeat;
+            }   
+        }
+        
+    }
+    &__item-link {
+        text-decoration: none;
+        color: #140a32;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        
+    }
+    
+}
+@media only screen and (min-width:390px) {
+    .hero {
+        &__title {
+            font-size: 22px;
+        }
+        &__desc {
+            font-size: 14px;
+        }
+        &__link1 {
+            width: 360px;
+        }
+        &__list {
+            column-gap: 49px;
+        }
+        &__item {
+            column-gap: 10px;
+        }
+        &__item-link  {
+            font-size: 14px;
+        }
+    }
+}
+@media only screen and (min-width:576px) {
+    .hero {
+        &__img {
+            width: 280px;
+            height: auto;
+        }
+        &__title {
+            font-size: 25px;
+        }
+        &__item-link  {
+            font-size: 15px;
+        }
+    }
+    
+}
+@media only screen and (min-width:650px) {
+    .hero {
+        &__img {
+            width: 280px;
+            height: auto;
+        }
+        &__title {
+            font-size: 28px;
+        }
+        &__desc {
+            font-size: 16px;
+        }
+        &__list {
+            justify-content: space-between;
+        }
+        &__item-link  {
+            font-size: 15px;
+        }
+    }
+    
+}
+@media only screen and (min-width:777px) {
+    .hero {
+        &__img {
+            width: 300px;
+            height: auto;
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__desc {
+            font-size: 17px;
+        }
+        &__list {
+            justify-content: space-between;
+        }
+        &__link1 {
+            font-size: 15px;
+        }
+        &__link2 {
+            font-size: 25px;
+        }
+        &__item-link  {
+            font-size: 16px;
+        }
+        &__link-desc {
+            font-size: 13px;
+        }
+    }
+    
+}
+@media only screen and (min-width:1024px) {
+    .hero {
+        padding-top: 0;
+        padding-bottom: 96px;
+        &__wrapper {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: start;
+        }
+        &__about-wrapper {
+            width: 62%;
+            text-align: left;
+        }
+        &__span {
+            margin-bottom: 49px;
+        }
+        &__img {
+            margin-top: 10px;
+            width: 377px;
+            height: 402px;
+        }
+        &__about-innerdiv {
+            flex-direction: row;
+            column-gap: 30px;
+            align-items: flex-start;
+        }
+        &__list {
+            justify-content:flex-start;
+            column-gap: 20px;
+        }
+        &__item-link {
+            font-size: 14px;
+        }
+        &__link1 {
+            display: inline-block;
+            width: 253px;
+            padding: 16px 36px;
+            font-size: 16px;
+        }
+        &__link2 {
+            font-size: 24px;
+        }
+        &__span {
+            font-size: 14px;
+        }
+        &__title {
+            font-size: 36px;
+        }
+        &__desc  {
+            font-size: 16px;
+        }
+        
+    }
+    
+}
+@media only screen and (min-width:1140px) {
+   .hero {
+    &__list {
+        column-gap: 30px;
+    }
+    &__item-link {
+        font-size: 16px;
+    }
+   }
+}

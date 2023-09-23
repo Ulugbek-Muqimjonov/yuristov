@@ -1,0 +1,212 @@
+@use "../mixins";
+.help {
+    &__legal-help-title {
+        margin: 0;
+        margin-bottom: 15px;
+        color:#140A32;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.6px;
+    }
+    &__legal-help-desc1 {
+        margin: 0;
+        margin-bottom: 15px;
+        color: #140a32;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; 
+    }
+    &__legal-help-desc2 {
+        margin: 0;
+        margin-bottom: 40px;
+        color: #140a32;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; 
+    }
+    &__advice-title {
+        margin: 0;
+        margin-bottom: 15px;
+        color: #140a32;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing:  -0.6px;
+    }
+    &__advice-desc {
+        margin: 0;
+        margin-bottom: 20px;
+        color: #140a32;
+        font-family: Open Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; 
+    }
+    &__list {
+        @include mixins.unstyled-list($col:10px,$row:20px);
+        flex-wrap:wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        width:48%;
+        padding: 15px;
+        border: 1px solid #2f2b4326;
+        border-radius: 23.5px;
+    }
+    &__span {
+        display: inline-block;
+        margin-bottom: 15px;
+        color: #140a32;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        &::before {
+            margin-bottom: 15px;
+            @include mixins.psevdo-el(20px,20px,block,"../../images/phone.svg")
+        }
+    }
+    &__span--two::before {
+        background-image: url("../../images/reply.svg");
+    }
+    &__span--three::before {
+        background-image: url("../../images/chat-lines.svg");
+    }
+    &__span--four::before {
+        background-image: url("../../images/building.svg");
+    }
+    &__tel {
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: #140a32;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__link {
+        text-decoration: none;
+        color: #33836e;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+@media only screen and (min-width:390px) {
+    .help {
+        &__legal-help-title {
+            font-size: 20px;
+        }
+        &__legal-help-desc1 {
+            font-size: 14px;
+        }
+        &__legal-help-desc2 {
+            font-size: 14px;
+        }
+        &__advice-title {
+            font-size: 20px;
+        }
+        &__advice-desc {
+            font-size: 14px;
+        }
+        &__item {
+            width: 47%;
+        }
+        &__span {
+            font-size: 14px;
+            &::before {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__tel {
+            font-size: 18px;
+        }
+        &__link {
+            font-size: 14px;
+        }
+        
+    }
+}
+@media only screen and (min-width:660px) {
+    .help {
+        &__legal-help-title {
+            font-size: 28px;
+        }
+        &__legal-help-desc1 {
+            font-size: 15px;
+        }
+        &__legal-help-desc2 {
+            font-size: 15px;
+        }
+        &__advice-title {
+            font-size: 26px;
+        }
+        &__advice-desc {
+            font-size: 15px;
+        }
+        &__item {
+            width: 30%;
+            justify-content: space-between;
+        }        
+    }
+}
+// @media only screen and (min-width:1024px) {
+//    .help {
+//     &__item {
+//         width: 240px;
+//     }
+//    }
+// }
+@media only screen and (min-width:1140px) {
+    .help {
+        &__legal-help-title {
+            font-size: 28px;
+        }
+        &__legal-help-desc1 {
+            font-size: 15px;
+        }
+        &__legal-help-desc2 {
+            font-size: 15px;
+        }
+        &__advice-title {
+            font-size: 32px;
+        }
+        &__advice-desc {
+            font-size: 16px;
+        }
+        &__item {
+            width: 23.5%;
+            justify-content: space-between;
+        }        
+    }
+}
+@media only screen and (min-width:1240px) {
+    .help {
+        &__legal-help-title {
+            font-size: 32px;
+        }
+        &__legal-help-desc1 {
+            font-size: 16px;
+        }
+        &__legal-help-desc2 {
+            font-size: 16px;
+        }
+        &__advice-title {
+            font-size: 32px;
+        }      
+    }
+}
+

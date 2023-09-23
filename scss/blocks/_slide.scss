@@ -1,0 +1,65 @@
+@use "../mixins";
+
+.mySwiper {
+    padding-bottom: 40px;
+}
+.slide__card {
+    min-width: 278px !important;
+    width: 100% !important;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #2f2b4326;
+    border-radius: 20px;
+}
+.slide-span {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    padding-bottom: 5px;    
+    border-bottom: 1px solid #008000;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -37px;
+        @include mixins.psevdo-el(24px,24px,inline-block,"../../images/slide-before1.svg");
+    }   
+}
+.slide-span--one::before {
+    background-image: url("../../images/slide-before2.svg");
+}
+.slide-span--two::before {
+    background-image: url("../../images/slide-before3.svg");
+}
+.slide-span--three::before {
+    background-image: url("../../images/slide-before4.svg");
+}
+.slide-span--four::before {
+    background-image: url("../../images/slide-before5.svg");
+}
+.slide-span--five::before {
+    background-image: url("../../images/slide-before6.svg");
+}
+.slide-span--six::before {
+    background-image: url("../../images/slide-before7.svg");
+}
+.slide-span--seven::before {
+    background-image: url("../../images/slide-before8.svg");
+}
+
+.slide__title {
+    margin: 0;
+    color: #140A32;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+.slide__text {
+    margin: 0;
+    font-size: 12px;
+    color:#2f2b43b3;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}

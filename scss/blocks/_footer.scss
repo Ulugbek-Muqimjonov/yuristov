@@ -1,0 +1,70 @@
+@use "../mixins";
+.footer {
+    padding-top: 40px;
+    padding-bottom: 157px;
+    &__bold {
+        display: inline-block;
+        margin-bottom: 30px;
+        color:#140a32;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.6px;
+    }
+    &__list {
+        @include mixins.unstyled-list($col:10px,$row:20px);
+        flex-wrap: wrap;
+    }
+    &__inner-bold {
+        display: block;
+        margin-bottom: 15px;
+        color:#140a32;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__inner-list {
+        @include mixins.unstyled-list(column,10px,10px);
+    }
+    &__item {
+        width: 140px;
+    }
+    &__link {
+        text-decoration: none;
+        color:#140a32;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+@media only screen and (min-width:390px) {
+    .footer {
+        &__bold {
+            font-size: 20px;
+        }
+    }
+}
+@media only screen and (min-width:1140px) {
+    .footer {
+        &__bold {
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        &__list {
+            row-gap: 40px;
+            column-gap: 20px;
+        }
+        &__item {
+            width: 262px;
+        }
+        &__inner-bold {
+            font-size: 24px;
+        }
+        &__link {
+            font-size: 16px;
+        }
+    }
+}

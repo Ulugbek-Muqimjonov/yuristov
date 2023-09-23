@@ -1,0 +1,324 @@
+@use "../mixins";
+.portal-lawyers {
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+        color:#140a32;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.6px;
+    }
+    &__list {
+        @include mixins.unstyled-list(column,0,10px);
+        margin-bottom: 10px;
+    }
+    &__item {
+        position: relative;
+        min-width:100%;
+        padding: 18px 20px;
+        border-radius: 20px;
+        border: 1px solid #2f2b4326;
+        
+    }
+    &__innerdiv {
+        margin-left: 71px;
+        &::before {
+            position: absolute;
+            @include mixins.psevdo-el(50px,50px,inline-block,"../../images/portal-img.svg");
+            top: 30px;
+            left: 20px;
+        }
+    }
+    &__list-title {
+        margin: 0;
+        margin-bottom: 5px;
+        color:#140a32;
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__list-span1 {
+        display: block;
+        margin-bottom: 10px;
+        color:#140a32;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__list-span2 {
+        color:#2f2b4380;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__link {
+        width:100%;
+        margin-bottom: 40px;
+        padding: 15px 24px 16px;
+        border-radius: 10px;
+        background-color: #e0ece9;
+        color: #33836e;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;  
+    }
+    &__form-wrapper {
+        padding: 20px;
+        border-radius: 20px;
+        background-color:#33836e;
+    }
+    &__form {
+        padding-bottom: 15px;
+    }
+    &__online {
+        display:inline-flex;
+        align-items: center;
+        min-width:92px;
+        margin-bottom: 15px;
+        padding: 5px 12px;
+        border-radius:10px;
+        background-color: #fff;
+        color: #140a32;;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        &::before {
+            display:inline-block;
+            margin-right: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #12b76a;
+            content: "";
+        }
+    }
+    &__form-title {
+        margin: 0;
+        color: #fff;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__form-desc {
+        margin: 0;
+        margin-bottom: 15px;
+        color: #fff;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.36px;
+    }
+    &__form-text-area {
+        min-width:100%;
+        margin-bottom: 15px;
+        padding: 20px;
+        height: 180px;
+        resize: none;
+        border-radius: 10px;
+        &::placeholder {
+            display: block;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    &__input-tel {
+        position: relative;
+        width:100%;
+        margin-bottom: 15px;
+        padding: 27px 12px 7px;
+        border-radius: 10px;
+        border: none;
+        &::placeholder {
+            position: absolute;
+            top: 5px;
+            left: 12px;
+        }
+    }
+    &__input-name {
+        position: relative;
+        width:100%;
+        margin-bottom: 15px;
+        padding: 27px 12px 7px;
+        border-radius: 10px;
+        border: none;
+        &::placeholder {
+            position: absolute;
+            top: 5px;
+            left: 12px;
+        }
+    }
+    &__form-btn {
+                width:100%;
+        width: 100%;
+        padding: 15px 24px;
+        border: none;
+        background-color: #140a32;
+        border-radius: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__form-desc2 {
+        margin: 0;
+        margin-bottom: 15px;
+        color: #ffffff80;
+        font-size:12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__form-desc2-span {
+        text-decoration: underline; 
+    }
+    &__form-list {
+        @include mixins.unstyled-list($col:30px);
+    }
+    &__form-bold {
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.48px;
+    }
+    &__form-span {
+        color: #fff;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+}
+@media only screen and (min-width:390px) {
+    .portal-lawyers {
+        &__title {
+            font-size: 20px;
+        }
+        &__list-title {
+            font-size: 14px;
+        }
+        &__link {
+            font-size: 14px;
+        }
+        &__form-title {
+            font-size: 20px;
+        }
+        &__form-bold {
+            font-size: 16px;
+        }
+        &__form-span {
+            font-size: 12px;
+        }
+    }
+} 
+
+@media only screen and (min-width:1140px) {
+    .portal-lawyers {
+        &__title {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        &__wrapper {
+            display: flex;
+            column-gap: 20px;
+        }
+        &__inner {
+            width: 41.712%;
+        }
+        &__list {
+            row-gap: 15px;
+            margin-bottom: 20px;
+        }
+        &__item {
+            padding: 20px;
+            padding-bottom: 19px;
+        }
+        &__list-title {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        &__list-span1 {
+            margin-bottom: 10px;    
+            font-size: 16px;
+        }
+        &__list-span2 {
+            font-size: 16px;
+        }
+        &__link {
+            margin: 0;
+            padding: 17px 36px;
+            font-size: 16px;
+        }
+        &__form-wrapper {
+            position: relative;
+            padding: 40px;
+        }
+        &__online {
+            position: absolute;
+            top: 20px;
+            right:20px;
+            display: inline-block;
+            width: 96px;
+            margin: 0;
+            margin-left: auto;
+        }
+        &__form-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        &__form-desc {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        &__form-text-area {
+            margin-bottom: 20px;
+            padding: 12px 16px;
+            height: 213px;
+        }
+        &__input-wrapper {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+        }
+        &__input-tel {
+            margin: 0;
+            width: 35%;
+        }
+        &__input-name {
+            margin: 0;
+            width: 35%;
+        }
+        &__form-btn {
+            width: 25%;
+        }
+        &__form-list {
+            column-gap: 42px;
+        }
+        &__form-bold {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        &__form-span {
+            font-size: 16px;
+        }
+    }
+}

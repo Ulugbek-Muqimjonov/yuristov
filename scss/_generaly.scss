@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  font-family: "Open Sans","Arial", sans-serif;;
+  font-style: normal;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+.site-main {
+  flex-grow: 1;
+}
+img {
+  display: block;
+}
+a {
+  display: inline-block;
+}
+
+.active  .hide-modal {
+  display: block;
+}
+.active2 .approved {
+  display: block;
+}

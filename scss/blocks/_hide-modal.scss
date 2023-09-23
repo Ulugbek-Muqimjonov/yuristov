@@ -1,0 +1,343 @@
+@use "../mixins";
+.hide-modal {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    height: 100vh;
+    padding: 20px 26px 0 20px;
+    box-shadow: 0px 4px 40px 0px #0000001a;
+    background-image: url("../../images/hidden-bg.png");
+    background-repeat: no-repeat;
+    background-position-x:center;
+    background-position-y:calc(50%);
+    &__innerdiv {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 15px;
+        color:#140a32;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.66px;
+    }
+    &__exit {
+        display: inline-block;
+        border: none;
+        width: 24px;
+        height: 24px;
+        background-color:transparent;
+        @include mixins.background-img("../../images/close_thick.svg",24px,24px);
+        background-size: cover;
+    }
+    &__form {
+        @include mixins.unstyled-list(column,0,15px);
+        margin-bottom: 15px;
+    }
+    &__input-tel {
+        position: relative;
+        padding: 26px 12px 7px;
+        border:1px solid #2f2b4326;
+        border-radius: 10px;
+        outline: none;
+        &::placeholder {
+            position: absolute;
+            top: 5px;
+        }
+        &:focus {
+            border-color: #140a32;
+            box-shadow: -6px -1px 45px -17px rgba(0,0,0,0.75);
+            -webkit-box-shadow: -6px -1px 45px -17px rgba(0,0,0,0.75);
+            -moz-box-shadow: -6px -1px 45px -17px rgba(0,0,0,0.75);
+        }
+    }
+    &__input-name {
+        position: relative;
+        padding: 26px 12px 7px;
+        border:1px solid #2f2b4326;
+        border-radius: 10px;
+        outline: none;
+        &::placeholder {
+            position: absolute;
+            top: 5px;
+        }
+        &:focus {
+            border-color: #140a32;
+            box-shadow: -6px -1px 45px -17px rgba(0,0,0,0.75);
+            -webkit-box-shadow: -6px -1px 45px -17px rgba(0,0,0,0.75);
+            -moz-box-shadow: -6px -1px 45px -17px rgba(0,0,0,0.75);
+        }
+    }
+    &__btn {
+        max-width: 100%;
+        width: 100%;
+        padding: 15px 24px 16px;
+        background-color: #140a32;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border: none;
+    }
+    &__desc {
+        margin: 0;
+        color:#2f2b4380;
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__span {
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (min-width:390px) {
+    .hide-modal {
+        background-size: contain;
+        &__title {
+            font-size: 20px;
+        }
+        &__desc {
+            font-size: 12px;
+        }
+    }
+}
+@media only screen and (min-width:576px) {
+    .hide-modal {
+        background-size: 536px 276px;
+        &__title {
+            text-align: center;
+            font-size: 23px;
+        }
+        &__desc {
+            font-size: 12px;
+        }
+        &__form {
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 30px;
+        }
+        &__input-tel {
+            width: 48%;
+        }
+        &__input-name {
+            width: 48%;
+        }
+        &__btn {
+            width: 30%;
+        }
+        &__desc {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+    }
+}
+@media only screen and (min-width:650px) {
+    .hide-modal {
+        background-size: 655px 298px;   
+        &__title {
+            text-align: center;
+            font-size: 23px;
+        }
+        &__desc {
+            font-size: 12px;
+        }
+        &__form {
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 30px;
+        }
+        &__input-tel {
+            width: 48%;
+        }
+        &__input-name {
+            width: 48%;
+        }
+        &__btn {
+            width: 30%;
+        }
+        &__desc {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        &__exit {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+@media only screen and (min-width:777px) {
+    .hide-modal {
+        width: 100vw;
+           background-size: 789px 385px;  
+        &__title {
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+        &__desc {
+            font-size: 12px;
+        }
+        &__form {
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 30px;
+        }
+        &__input-tel {
+            width: 48%;
+        }
+        &__input-name {
+            width: 48%;
+        }
+        &__btn {
+            width: 30%;
+        }
+        &__desc {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        &__exit {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+@media only screen and (min-width:826px) {
+    .hide-modal {
+        background-size: 789px 385px;   
+        &__input-tel {
+            width: 30%;
+        }
+        &__input-name {
+            width: 30%;
+        }
+        &__desc {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        &__exit {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width:1024px) {
+    .hide-modal {
+        width: 100%;
+        background-size: 1000px auto; 
+        background-image: url("../../images/hide-modal-bgfordecktop.png"); 
+        background-position: calc(50% - 300px) top;
+        &__wrapper {
+            margin-left: auto;
+            padding: 30px;
+            width: 65%;   
+        } 
+        &__title {
+            margin-bottom: 170px;
+            text-align: left;
+            font-size: 32px;
+        }
+        &__desc {
+            font-size: 12px;
+        }
+        &__form {
+            margin-left: auto;
+            width: 600px;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            column-gap: 30px;
+        }
+        &__input-tel {
+            width: 48%;
+        }
+        &__input-name {
+            width: 48%;
+        }
+        &__btn {
+            width: 30%;
+        }
+        &__desc {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        &__exit {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width:1210px) {
+    .hide-modal {
+        width: 100%;
+        background-size: 1000px auto; 
+        background-image: url("../../images/hide-modal-bgfordecktop.png"); 
+        background-position: calc(50% - 327px) top;
+        
+        &__form {
+            width: 700px;
+        }
+
+    }
+
+
+}
+@media only screen and (min-width:1400px) {
+    .hide-modal {
+        width: 100%;
+        background-size: 1200px auto; 
+        background-image: url("../../images/hide-modal-bgfordecktop.png"); 
+        background-position: calc(50% - 327px) top;
+        
+        &__form {
+            width: 750px;
+        }
+        &__title {
+            margin-bottom: 196px;
+            font-size: 35px;
+        }
+        &__desc {
+            font-size: 20px;
+        }
+
+    }
+
+
+}
+
+@media only screen and (min-width:1512px) {
+    .hide-modal {
+        width: 100%;
+        background-size: 1300px auto; 
+        background-image: url("../../images/hide-modal-bgfordecktop.png"); 
+        background-position: calc(50% - 393px) top;
+        
+        &__form {
+            width: 800px;
+        }
+        &__title {
+            margin-bottom: 230px;
+            font-size: 35px;
+        }
+        &__desc {
+            font-size: 20px;
+        }
+
+    }
+
+
+}
+

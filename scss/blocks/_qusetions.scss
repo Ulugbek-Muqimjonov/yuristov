@@ -1,0 +1,205 @@
+@use "../mixins";
+.questions {
+    &__wrapper {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 194px;
+        padding-left: 20px;
+        background-color: #2f2b430a;
+        border: 1px solid #2f2b430a;
+        border-radius: 20px;
+        @include mixins.background-img("../../images/questons-phone.svg",292px,179px);
+        background-position: center bottom;
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 15px;
+        color: #140a32;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__innerdiv {
+        margin-bottom: 15px;
+        padding: 4px 16px;
+        width:100%;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    &__span {
+        display: block;
+        color:#2f2b4366;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__tel {
+        text-decoration: none;
+        color: #140a32;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__link {
+        text-align: center; 
+        text-decoration: none;
+        width:100%;
+        margin-bottom: 15px;
+        padding: 16px 24px;
+        border-radius: 10px;
+        background-color: #33836e;
+        color: #fff;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__desc {
+        margin: 0;
+        color:#2f2b4366;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__desc-span {
+        text-decoration: underline;
+    }
+    
+    &__legal {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    &__legal-title {
+        margin: 0;
+        margin-bottom: 15px;
+        color: #140a32;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.6px;
+    }
+    &__legal-desc {
+        margin: 0;
+        margin-bottom: 20px;
+        color:#140a32;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+    &__legal-link {
+        min-width:100%;
+        padding: 15px 24px;
+        padding-bottom: 16px;
+        color:#33836e;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;
+        border-radius: 10px;
+        background-color: #E0ECE9;
+        
+    }
+    &__user-feedback-title {
+        margin: 0;
+        margin-bottom: 20px;
+        color:#140a32;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.6px;
+    }
+}
+@media only screen and (min-width:390px) {
+    .questions {
+        &__title {
+            font-size: 24px;
+        }
+        &__link {
+            font-size: 14px;
+        }
+        &__legal-title {
+            font-size: 20px;
+        }
+        &__legal-desc {
+            font-size: 14px;
+        }
+        &__legal-link {
+            font-size: 14px;
+        }
+        &__user-feedback-title {
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width:1140px) {
+    .questions {
+        &__wrapper {
+            padding-top: 51px;
+            padding-bottom: 37px;
+            padding-left: 50px;
+            @include mixins.display();
+            background-image: url("../../images/phonebg.svg");
+            background-position: right bottom;
+        }
+        &__title-wrapper {
+            text-align: left;
+            width: 32.5%;
+            // width: 295px;
+        }
+        &__title {
+            font-size: 32px;
+        }
+        &__tel-wrapper {
+            width:100%;
+            margin-bottom: 18px;
+            @include mixins.display($y:flex-start,$col:15px)
+        }
+        &__inner {
+            width: 39% ;
+        }
+        &__innerdiv {
+            margin: 0;
+            padding: 8.5px 16px;
+            width: 49.24%;;
+        }
+        &__link {
+            margin: 0;
+            padding: 18.5px 36px; 
+            width: 49.74%;
+        }
+        &__desc {
+            font-size: 12px;
+        }
+        &__legal {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        &__legal-title {
+            margin-bottom: 20px;
+          font-size: 32px;
+        }
+        &__legal-desc {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        &__legal-link {
+            padding-top: 16px;
+            padding-bottom: 18px;
+            font-size: 16px;
+        }
+        &__user-feedback-title {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+    }
+}

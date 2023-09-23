@@ -1,0 +1,220 @@
+@use "../mixins";
+.site-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #2f2b4326;
+    &__inner {
+        padding-top: 15px;
+        @include mixins.display($x:space-between,$y:center)
+    }
+    &__gamburger-btn {
+        display: block; 
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        @include mixins.background-img("../../images/gamburgermenu.svg",24px,24px);
+    }
+    &__list {
+        @include mixins.unstyled-list($col:15px);
+    }
+    &__form {
+        display: none;
+    }
+    &__input {
+        width: 427px;
+        padding: 18px 20px;
+        border: none;
+        border-radius: 10px;
+        background:#2f2b430a;
+        @include mixins.background-img("../../images/search-inp.svg",24px,24px);
+        background-position: calc(100% - 20px) center;
+        &::placeholder {
+            color:#2f2b4366;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    &__question {
+        display: flex;
+        align-items:stretch;
+        column-gap: 10px;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+        min-width:192px;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #fff;
+        font-size: 16px;
+        background-color: #33836e;
+        &::before {
+            @include mixins.psevdo-el(24px,24px,inline-block,"../../images/question-bg.svg")
+        }
+        display: none;
+    }
+    &__contact {
+        display:none;
+    }
+    &__tel {
+        display: block;
+        margin-bottom: 5px;
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__span {
+        color:#2f2b4380;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__bottom {
+        display: none;
+    }
+    
+}
+.logo-img {
+    width: 150px;
+    height: 32px;
+}
+
+@media only screen and (min-width:390px) {
+    .site-header {
+        &__gamburger-btn {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .logo-img {
+        width: 179px;
+        height: 32px;
+    }
+}
+
+
+@media only screen and (min-width:1024px){
+    .site-header {
+        padding-bottom: 0;
+        border-color: transparent;
+        &__gamburger-btn {
+            display: none;  
+        }
+        &__form {
+            display: block;
+        }
+        &__input {
+            width: 325px;
+            padding: 14px;
+        }
+        &__question {
+            display: flex;
+            padding: 10px 16px;
+            font-size: 14px;
+            &::before {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &__list {
+            display: none;
+        }
+        &__contact {
+            display: block;
+        }
+        &__tel {
+            font-size: 17px;
+        }
+        &__span {
+            font-size: 12px;
+        }
+        &__bottom {
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+        &__navigation {
+            @include mixins.display($x:space-between,$y:center)
+            
+        }
+        &__contact-list {
+            @include mixins.unstyled-list($col:15px)
+        }
+        &__contact-item {
+            @include mixins.display($y:center,$col:10px);
+            padding: 10px 20px;
+            border: 1px solid #2f2b4326;
+            border-radius: 10px;
+            &::before {
+                @include mixins.psevdo-el(20px,20px,inline-block,"../../images/phone-before.svg")
+            }
+            &:last-child::before {
+                background-image: url("../../images/telegram-before.svg");
+            }
+        }
+        &__contact-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: #140a32;
+        }
+        &__bottom-list {
+            @include mixins.unstyled-list($col:30px);
+        }
+        &__bottom-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: #140a32;
+        }
+        &__bottom-btn {
+            @include mixins.display($y:center,$col:10px);
+            text-decoration: none;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: #140a32;
+            &::before {
+                @include mixins.psevdo-el(20px,20px,inline-block,"../../images/user-before.svg")
+            }
+        }
+    }
+    .logo-img {
+        width: 123px;
+        height: 35px;
+    }
+}
+
+@media only screen and (min-width:1210px) {
+    .logo-img {
+        width: 211px;
+        height: 38px;
+    }
+    .site-header {
+        &__input {
+            width: 427px;
+            padding: 14px 20px; 
+        }
+        &__question {
+            padding: 11px 20px;
+        }
+        &__tel {
+            font-size: 18px;
+        }
+        &__span {
+            font-size: 13px;
+        }
+    }
+}
